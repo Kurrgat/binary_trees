@@ -8,19 +8,11 @@
  */
 avl_t *array_to_avl(int *array, size_t size)
 {
+	unsigned int i;
 	avl_t *root = NULL;
 
-	if (!array || size == 0)
-		return NULL;
+	for (i = 0; i < size; i++)
+		avl_insert(&root, array[i]);
 
-	for (size_t i = 0; i < size; i++)
-	{
-		if (avl_insert(&root, array[i]) == NULL)
-		{
-			/* Handle failure, if needed */
-			return NULL;
-		}
-	}
-
-	return root;
+	return (root);
 }
