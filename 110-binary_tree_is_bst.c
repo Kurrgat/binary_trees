@@ -15,7 +15,8 @@ int binary_tree_is_bst(const binary_tree_t *tree)
 }
 
 /**
- * is_bst_util - Helper function to recursively check if a binary tree is a valid BST
+ * is_bst_util - Helper function to recursively check
+ * if a binary tree is a valid BST
  * @tree: A pointer to the root node of the tree to check
  * @min: The minimum value allowed in the tree
  * @max: The maximum value allowed in the tree
