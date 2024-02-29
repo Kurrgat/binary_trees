@@ -15,8 +15,10 @@ int binary_tree_is_full(const binary_tree_t *tree)
 	if (tree->left == NULL && tree->right == NULL)
 		return (1);
 
-	/* If both left and right subtrees are not NULL,
-	 * * recursively check if they are full */
+	/**
+	 * If both left and right subtrees are not NULL,
+	 * recursively check if they are full
+	 */
 	if (tree->left && tree->right)
 		return (binary_tree_is_full(tree->left) &&
 				binary_tree_is_full(tree->right));
